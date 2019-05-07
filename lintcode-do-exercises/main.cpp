@@ -103,6 +103,31 @@ int numFriendRequests(vector<int> &ages) {
     return count;
 }
 
+//877. 同和分割数组
+bool splitArray(vector<int> &nums) {
+    // write your code here
+    vector<int> sum;
+    sum.push_back(nums[0]);
+    for(int i = 1;i < nums.size();i++){
+        sum.push_back(sum[i - 1] + nums[i]);
+    }
+    for(int i = 3;i < sum.size() - 3;i++){
+        vector<int> res;
+        for(int j = 1;j < i - 1;j++){
+            if(j > 1 && sum[j - 1] == sum[i - 1] - sum[j])
+                res.push_back(sum[j - 1]);
+        }
+        for(int k = i + 2;k <= sum.size() - 1;k++){
+            if(sum[k - 1] - sum[i] == sum[sum.size() - 1] - sum[k])
+                if(find(res.begin(),res.end(),sum[k - 1] - sum[i]) != res.end())
+                    return true;
+        }
+    }
+    return false;
+}
+
+//1088. 冗余的连接
+
 int main(int argc, const char * argv[]) {
     // insert code here...
     vector<int> nums;
