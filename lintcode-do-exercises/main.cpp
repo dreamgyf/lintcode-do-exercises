@@ -8,6 +8,8 @@
 
 #include <iostream>
 #include <vector>
+#include <algorithm>
+#include <map>
 
 using namespace std;
 
@@ -54,19 +56,66 @@ int digitCounts(int k, int n) {
     return count;
 }
 
+//1393. 适龄的朋友
+int numFriendRequests(vector<int> &ages) {
+    //暴力循环超时了
+//    int count = 0;
+//    for(int i = 0;i < ages.size();i++){
+//        for(int j = 0;j < ages.size();j++){
+//            if(i == j)
+//                continue;
+//            if(!(ages[j] <= 0.5 * ages[i] + 7 || ages[j] > ages[i] || (ages[j] > 100 && ages[i] < 100)))
+//                count++;
+//        }
+//    }
+//    return count;
+    //稍微改了下，还是超时
+//    int count = 0;
+//    for(int i = 0;i < ages.size();i++){
+//        for(int j = i + 1;j < ages.size();j++){
+//            if(!(ages[j] <= 0.5 * ages[i] + 7 || ages[j] > ages[i] || (ages[j] > 100 && ages[i] < 100)))
+//                count++;
+//            if(!(ages[i] <= 0.5 * ages[j] + 7 || ages[i] > ages[j] || (ages[i] > 100 && ages[j] < 100)))
+//                count++;
+//        }
+//    }
+//    return count;
+    sort(ages.begin(),ages.end());
+    map<int,int> ages_map;
+    for(int i = 0;i < ages.size();i++){
+        if(ages_map.count(ages[i]))
+            ages_map[ages[i]] = ages_map[ages[i]] + 1;
+        else
+            ages_map[ages[i]] = 1;
+    }
+    int count = 0;
+    for(auto i = --ages_map.end();i != ages_map.begin();i--){
+        for(auto j = ages_map.begin();j != i;j++){
+            if(!(j->first <= 0.5 * i->first + 7 || (j->first > 100 && i->first < 100)))
+                count += j->second * i->second;
+        }
+        if(i->second > 1 && !(i->first <= 0.5 * i->first + 7 || (i->first > 100 && i->first < 100)))
+            count += i->second * (i->second - 1);
+    }
+    auto i = ages_map.begin();
+    if(i->second > 1 && !(i->first <= 0.5 * i->first + 7 || (i->first > 100 && i->first < 100)))
+        count += i->second * (i->second - 1);
+    return count;
+}
+
 int main(int argc, const char * argv[]) {
     // insert code here...
     vector<int> nums;
-    nums.push_back(2);
-    nums.push_back(2);
-    nums.push_back(3);
-    nums.push_back(4);
-    nums.push_back(5);
-    nums.push_back(6);
-    nums.push_back(8);
-    nums.push_back(13);
-    nums.push_back(17);
-    nums.push_back(18);
-    cout << binarySearch(nums,17) << "\n";
+    nums.push_back(16);
+    nums.push_back(16);
+//    nums.push_back(12);
+//    nums.push_back(48);
+//    nums.push_back(20);
+//    nums.push_back(50);
+//    nums.push_back(8);
+//    nums.push_back(13);
+//    nums.push_back(17);
+//    nums.push_back(18);
+    cout << numFriendRequests(nums) << "\n";
     return 0;
 }
