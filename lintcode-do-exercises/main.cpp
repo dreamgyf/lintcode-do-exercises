@@ -126,7 +126,21 @@ bool splitArray(vector<int> &nums) {
     return false;
 }
 
-//1088. 冗余的连接
+//1132. 合法的三角数
+int triangleNumber(vector<int> &nums) {
+    // Write your code here
+    //暴力解法，可把最后一层循环改成二分查找，时间复杂度可从O(n^3)降到O(n^2 * logn)
+    int count = 0;
+    sort(nums.begin(),nums.end());
+    for(int i = 0;i < nums.size() - 2;i++){
+        for(int j = i + 1;j < nums.size() - 1;j++)
+            for(int k = j + 1;k < nums.size();k++){
+                if(nums[i] + nums[j] > nums[k])
+                    count++;
+            }
+    }
+    return count;
+}
 
 int main(int argc, const char * argv[]) {
     // insert code here...
