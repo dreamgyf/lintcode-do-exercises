@@ -39,6 +39,21 @@ int binarySearch(vector<int> &nums, int target) {
     return -1;
 }
 
+//3. 统计数字
+int digitCounts(int k, int n) {
+    // write your code here
+    int count = 0;
+    for(int num = 0;num <= n;num++) {
+        int temp = num;
+        do {
+            if((temp - k) % 10 == 0)
+                count++;
+            temp /= 10;
+        } while (temp != 0);
+    }
+    return count;
+}
+
 int main(int argc, const char * argv[]) {
     // insert code here...
     vector<int> nums;
