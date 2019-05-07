@@ -1,15 +1,56 @@
 //
 //  main.cpp
-//  lintcode-do-exercises
+//  lintcode
 //
-//  Created by 高云峰 on 2019/5/7.
+//  Created by 高云峰 on 2019/5/6.
 //  Copyright © 2019 高云峰. All rights reserved.
 //
 
 #include <iostream>
+#include <vector>
+
+using namespace std;
+
+int binarySearch(vector<int> &nums, int target) {
+    // write your code here
+    long left = 0;
+    long right = nums.size() - 1;
+    while(right - left >= 0)
+    {
+        long position = (right - left) / 2 + left;
+        if(target < nums[position])
+        {
+            right = position - 1;
+            continue;
+        }
+        else if(target > nums[position])
+        {
+            left = position + 1;
+            continue;
+        }
+        else
+        {
+            int i;
+            for(i = 0;position - i >= 0 && nums[position - i] == target;i++);
+            return position - --i;
+        }
+    }
+    return -1;
+}
 
 int main(int argc, const char * argv[]) {
     // insert code here...
-    std::cout << "Hello, World!\n";
+    vector<int> nums;
+    nums.push_back(2);
+    nums.push_back(2);
+    nums.push_back(3);
+    nums.push_back(4);
+    nums.push_back(5);
+    nums.push_back(6);
+    nums.push_back(8);
+    nums.push_back(13);
+    nums.push_back(17);
+    nums.push_back(18);
+    cout << binarySearch(nums,17) << "\n";
     return 0;
 }
