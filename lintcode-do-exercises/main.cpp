@@ -13,6 +13,7 @@
 #include <string>
 #include <stack>
 #include <math.h>
+#include <queue>
 
 using namespace std;
 
@@ -206,6 +207,44 @@ double myPow(double x, int n) {
     }
     if(negative)
         res = 1 / res;
+    return res;
+}
+
+//1101. 二叉树最大宽度
+class TreeNode {
+    public:
+        int val;
+        TreeNode *left, *right;
+        TreeNode(int val) {
+            this->val = val;
+            this->left = this->right = NULL;
+        }
+};
+
+int widthOfBinaryTree(TreeNode * root) {
+    // Write your code here
+    if(root == nullptr)
+        return 0;
+    int res = 1;
+    queue<TreeNode*> queue;
+    queue.push(root);
+    root->val = 0;
+    while(!queue.empty()){
+        auto size = queue.size();
+        res = max(res, queue.back()->val - queue.front()->val + 1);
+        for(int i = 0;i < size;i++){
+            root = queue.front();
+            queue.pop();
+            if(root->left != nullptr){
+                root->left->val = root->val * 2;
+                queue.push(root->left);
+            }
+            if(root->right != nullptr){
+                root->right->val = root->val * 2 + 1;
+                queue.push(root->right);
+            }
+        }
+    }
     return res;
 }
 
