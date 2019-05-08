@@ -189,6 +189,26 @@ int lengthLongestPath(string &input) {
     return max_length;
 }
 
+//428. x的n次幂
+double myPow(double x, int n) {
+    // write your code here
+    if(n == 0)
+        return 1;
+    double res = 1;
+    bool negative = n < 0 ? true : false;
+    n = abs(n);
+    while(n){
+        if(n % 2){
+            res *= x;
+        }
+        n /= 2;
+        x *= x;
+    }
+    if(negative)
+        res = 1 / res;
+    return res;
+}
+
 int main(int argc, const char * argv[]) {
     // insert code here...
     vector<int> nums;
