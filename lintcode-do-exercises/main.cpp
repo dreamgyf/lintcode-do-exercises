@@ -10,6 +10,9 @@
 #include <vector>
 #include <algorithm>
 #include <map>
+#include <string>
+#include <stack>
+#include <math.h>
 
 using namespace std;
 
@@ -142,6 +145,50 @@ int triangleNumber(vector<int> &nums) {
     return count;
 }
 
+//643. 最长绝对文件路径 ps:lintcode上的\n \t不是一个字符，需要稍加改动
+string substr(string &str , int pos){
+    int begin;
+    for(begin = pos + 1;str[begin] == '\t';begin++);
+    for(int i = begin;i < str.length();i++){
+        if(str[i] == '\n'){
+            return str.substr(begin,i - begin);
+        }
+        if(i == str.length() - 1)
+            return str.substr(begin);
+    }
+    return "";
+}
+int lengthLongestPath(string &input) {
+    // write your code here
+    stack<int> path_length;
+    int max_length = 0;
+    int curr_length = 0;
+    for(int i = 0;i < input.length();i++){
+        if(input[i] == '\n'){
+            if(path_length.empty()){
+                path_length.push(input.substr(0,i).length());
+                curr_length += input.substr(0,i).length();
+            }
+            string curr_path = substr(input,i);
+            int begin;
+            for(begin = i + 1;input[begin] == '\t';begin++);
+            int level = begin - i;
+            while(path_length.size() >= level){
+                curr_length -= path_length.top();
+                path_length.pop();
+            }
+            if(curr_path.find('.') != string::npos){
+                max_length = max(max_length,curr_length + (int)curr_path.length() + (int)path_length.size());
+            }
+            else {
+                path_length.push(curr_path.length());
+                curr_length += curr_path.length();
+            }
+        }
+    }
+    return max_length;
+}
+
 int main(int argc, const char * argv[]) {
     // insert code here...
     vector<int> nums;
@@ -155,6 +202,8 @@ int main(int argc, const char * argv[]) {
 //    nums.push_back(13);
 //    nums.push_back(17);
 //    nums.push_back(18);
-    cout << numFriendRequests(nums) << "\n";
+    string test = "skd\n\talskjv\n\t\tlskjf\n\t\t\tklsj.slkj\n\t\tsdlfkj.sdlkjf\n\t\tslkdjf.sdfkj\n\tsldkjf\n\t\tlskdjf\n\t\t\tslkdjf.sldkjf\n\t\t\tslkjf\n\t\t\tsfdklj\n\t\t\tlskjdflk.sdkflj\n\t\t\tsdlkjfl\n\t\t\t\tlskdjf\n\t\t\t\t\tlskdjf.sdlkfj\n\t\t\t\t\tlsdkjf\n\t\t\t\t\t\tsldkfjl.sdlfkj\n\t\t\t\tsldfjlkjd\n\t\t\tsdlfjlk\n\t\t\tlsdkjf\n\t\tlsdkjfl\n\tskdjfl\n\t\tsladkfjlj\n\t\tlskjdflkjsdlfjsldjfljslkjlkjslkjslfjlskjgldfjlkfdjbljdbkjdlkjkasljfklasjdfkljaklwejrkljewkljfslkjflksjfvsafjlgjfljgklsdf.a";
+    lengthLongestPath(test);
+    cout << test << "\n";
     return 0;
 }
