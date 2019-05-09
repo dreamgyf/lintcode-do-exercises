@@ -312,6 +312,21 @@ int coinChange(vector<int> &coins, int amount) {
     return dp[amount];
 }
 
+//114. 不同的路径
+int uniquePaths(int m, int n) {
+    // write your code here
+    int dp[m][n];
+    for(int i = 0;i < m;i++){
+        for(int j = 0;j < n;j++){
+            if(i == 0 || j == 0)
+                dp[i][j] = 1;
+            else
+                dp[i][j] = dp[i - 1][j] + dp[i][j - 1];
+        }
+    }
+    return dp[m - 1][n - 1];
+}
+
 int main(int argc, const char * argv[]) {
     // insert code here...
     vector<int> nums;
