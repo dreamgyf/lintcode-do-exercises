@@ -271,6 +271,26 @@ int superPow(int a, vector<int> &b) {
     }
     return res;
 }
+//1208. 目标和
+int findTargetSumWays_res = 0;
+void findTargetSumWays_dfs(vector<int> &nums, int pos,int s){
+    if(nums.size() - pos == 0){
+        if(s == 0){
+            findTargetSumWays_res++;
+            return;
+        }
+        else {
+            return;
+        }
+    }
+    findTargetSumWays_dfs(nums, pos + 1,s + nums[pos]);
+    findTargetSumWays_dfs(nums, pos + 1,s - nums[pos]);
+}
+int findTargetSumWays(vector<int> &nums, int s) {
+    // Write your code here
+    findTargetSumWays_dfs(nums,0,s);
+    return findTargetSumWays_res;
+}
 
 int main(int argc, const char * argv[]) {
     // insert code here...
