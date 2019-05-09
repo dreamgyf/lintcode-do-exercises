@@ -248,12 +248,36 @@ int widthOfBinaryTree(TreeNode * root) {
     return res;
 }
 
+//1275. 超级幂次
+int modPow(int x,int n,int mod){
+    int res = 1;
+    x %= mod;
+    while(n){
+        if(n % 2){
+            res *= x;
+            res %= mod;
+        }
+        n /= 2;
+        x *= x;
+        x %= mod;
+    }
+    return res;
+}
+int superPow(int a, vector<int> &b) {
+    // Write your code here
+    int res = 1;
+    for(int i = 0;i < b.size();i++){
+        res = modPow(res,10,1337) * modPow(a,b[i], 1337) % 1337;
+    }
+    return res;
+}
+
 int main(int argc, const char * argv[]) {
     // insert code here...
     vector<int> nums;
-    nums.push_back(16);
-    nums.push_back(16);
-//    nums.push_back(12);
+    nums.push_back(2);
+    nums.push_back(0);
+    nums.push_back(0);
 //    nums.push_back(48);
 //    nums.push_back(20);
 //    nums.push_back(50);
@@ -262,7 +286,7 @@ int main(int argc, const char * argv[]) {
 //    nums.push_back(17);
 //    nums.push_back(18);
     string test = "skd\n\talskjv\n\t\tlskjf\n\t\t\tklsj.slkj\n\t\tsdlfkj.sdlkjf\n\t\tslkdjf.sdfkj\n\tsldkjf\n\t\tlskdjf\n\t\t\tslkdjf.sldkjf\n\t\t\tslkjf\n\t\t\tsfdklj\n\t\t\tlskjdflk.sdkflj\n\t\t\tsdlkjfl\n\t\t\t\tlskdjf\n\t\t\t\t\tlskdjf.sdlkfj\n\t\t\t\t\tlsdkjf\n\t\t\t\t\t\tsldkfjl.sdlfkj\n\t\t\t\tsldfjlkjd\n\t\t\tsdlfjlk\n\t\t\tlsdkjf\n\t\tlsdkjfl\n\tskdjfl\n\t\tsladkfjlj\n\t\tlskjdflkjsdlfjsldjfljslkjlkjslkjslfjlskjgldfjlkfdjbljdbkjdlkjkasljfklasjdfkljaklwejrkljewkljfslkjflksjfvsafjlgjfljgklsdf.a";
-    lengthLongestPath(test);
-    cout << test << "\n";
+    superPow(2147483647, nums);
+//    cout << test << "\n";
     return 0;
 }
