@@ -272,6 +272,7 @@ int superPow(int a, vector<int> &b) {
     return res;
 }
 //1208. 目标和
+//解1:递归
 int findTargetSumWays_res = 0;
 void findTargetSumWays_dfs(vector<int> &nums, int pos,int s){
     if(nums.size() - pos == 0){
@@ -290,6 +291,38 @@ int findTargetSumWays(vector<int> &nums, int s) {
     // Write your code here
     findTargetSumWays_dfs(nums,0,s);
     return findTargetSumWays_res;
+}
+//解2:动态规划
+int findTargetSumWays2(vector<int> &nums, int s) {
+    if(nums.size() == 0)
+        return 0;
+    int sum = 0;
+    for(int num : nums){
+        sum += num;
+    }
+    if(sum < s)
+        return 0;
+    int dp[nums.size()][sum + 1];
+    for(int i = 0;i < nums.size();i++){
+        for(int j = 0;j <= sum;j++){
+            if(i == 0 && nums[i] == j){
+                if(nums[i] == 0)
+                    dp[i][j] = 2;
+                else
+                    dp[i][j] = 1;
+                continue;
+            }
+            else if(i == 0 && nums[i] != j){
+                dp[i][j] = 0;
+                continue;
+            }
+            if(j + nums[i] <= sum)
+                dp[i][j] = dp[i - 1][abs(j - nums[i])] + dp[i - 1][j + nums[i]];
+            else
+                dp[i][j] = dp[i - 1][abs(j - nums[i])];
+        }
+    }
+    return dp[nums.size() - 1][abs(s)];
 }
 
 //669. 换硬币
@@ -330,18 +363,18 @@ int uniquePaths(int m, int n) {
 int main(int argc, const char * argv[]) {
     // insert code here...
     vector<int> nums;
-    nums.push_back(2);
-    nums.push_back(0);
-    nums.push_back(0);
-//    nums.push_back(48);
-//    nums.push_back(20);
+    nums.push_back(1);
+    nums.push_back(1);
+    nums.push_back(1);
+    nums.push_back(1);
+    nums.push_back(1);
 //    nums.push_back(50);
 //    nums.push_back(8);
 //    nums.push_back(13);
 //    nums.push_back(17);
 //    nums.push_back(18);
     string test = "skd\n\talskjv\n\t\tlskjf\n\t\t\tklsj.slkj\n\t\tsdlfkj.sdlkjf\n\t\tslkdjf.sdfkj\n\tsldkjf\n\t\tlskdjf\n\t\t\tslkdjf.sldkjf\n\t\t\tslkjf\n\t\t\tsfdklj\n\t\t\tlskjdflk.sdkflj\n\t\t\tsdlkjfl\n\t\t\t\tlskdjf\n\t\t\t\t\tlskdjf.sdlkfj\n\t\t\t\t\tlsdkjf\n\t\t\t\t\t\tsldkfjl.sdlfkj\n\t\t\t\tsldfjlkjd\n\t\t\tsdlfjlk\n\t\t\tlsdkjf\n\t\tlsdkjfl\n\tskdjfl\n\t\tsladkfjlj\n\t\tlskjdflkjsdlfjsldjfljslkjlkjslkjslfjlskjgldfjlkfdjbljdbkjdlkjkasljfklasjdfkljaklwejrkljewkljfslkjflksjfvsafjlgjfljgklsdf.a";
-    superPow(2147483647, nums);
-//    cout << test << "\n";
+    findTargetSumWays2(nums,3);
+    cout << test << "\n";
     return 0;
 }
