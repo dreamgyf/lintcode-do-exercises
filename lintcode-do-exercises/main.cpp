@@ -360,6 +360,23 @@ int uniquePaths(int m, int n) {
     return dp[m - 1][n - 1];
 }
 
+//116. 跳跃游戏
+bool canJump(vector<int> &A) {
+    // write your code here
+    bool dp[A.size()];
+    dp[0] = true;
+    for(int i = 1;i < A.size();i++){
+        dp[i] = false;
+        for(int j = i - 1;j >= 0;j--){
+            if(A[j] >= i - j && dp[j] == true){
+                dp[i] = true;
+                break;
+            }
+        }
+    }
+    return dp[A.size() - 1];
+}
+
 int main(int argc, const char * argv[]) {
     // insert code here...
     vector<int> nums;
