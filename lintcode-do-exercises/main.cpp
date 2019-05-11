@@ -377,6 +377,20 @@ bool canJump(vector<int> &A) {
     return dp[A.size() - 1];
 }
 
+//1279. 计算不同数字整数的个数
+int countNumbersWithUniqueDigits(int n) {
+    // Write your code here
+    int dp[n + 1];
+    dp[0] = 0;
+    dp[1] = 9;
+    int sum = dp[1];
+    for(int i = 2;i <= n;i++){
+        dp[i] = dp[i - 1] * (10 - (i - 1));
+        sum += dp[i];
+    }
+    return sum + 1;
+}
+
 int main(int argc, const char * argv[]) {
     // insert code here...
     vector<int> nums;
