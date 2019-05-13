@@ -403,6 +403,47 @@ int numWays(int n, int k) {
     return dp[n];
 }
 
+//91. 最小调整代价
+//int MinAdjustmentCost(vector<int> &A, int target) {
+//    // write your code here
+//    int dp[A.size()][101];
+//    for(int i = 0;i < A.size();i++){
+//        for(int j = 0;j <= 100;j++){
+//            if(i == 0)
+//                dp[i][j] = 0;
+//            else
+//                dp[i][j] = INT_MAX;
+//            if(i >= 1){
+//                for(int k = 0;k <= 100;k++){
+//                    if(abs(j - k) <= target)
+//                        dp[i][j] = min(dp[i][j],dp[i - 1][k] + A[i - 1]);
+//                }
+//            }
+//        }
+//    }
+//    return dp[A.size() - 1][A[A.size() - 1]];
+//}
+
+//982. 等差切片
+int numberOfArithmeticSlices(vector<int> &A) {
+    // Write your code here
+    if(A.empty())
+        return 0;
+    int dp[A.size()];
+    dp[0] = dp[1] = 0;
+    for(int i = 2;i < A.size();i++){
+        dp[i] = dp[i - 1];
+        int minus = A[i] - A[i - 1];
+        for(int j = i - 1;j > 0;j--){
+            if(A[j] - A[j - 1] == minus)
+                dp[i]++;
+            else
+                break;
+        }
+    }
+    return dp[A.size() - 1];
+}
+
 int main(int argc, const char * argv[]) {
     // insert code here...
     vector<int> nums;
