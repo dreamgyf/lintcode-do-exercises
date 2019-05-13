@@ -459,21 +459,38 @@ int minSteps(int n) {
     return dp[n];
 }
 
+//740. 零钱兑换 2    注意会出现重复
+int change(int amount, vector<int> &coins) {
+    // write your code here
+    int dp[amount + 1];
+    dp[0] = 1;
+    for(int i = 1;i <= amount;i++){
+        dp[i] = 0;
+    }
+    for(int i = 0;i < coins.size();i++){
+        for(int j = 0;j <= amount;j++){
+            if(j - coins[i] >= 0)
+                dp[j] += dp[j - coins[i]];
+        }
+    }
+    return dp[amount];
+}
+
 int main(int argc, const char * argv[]) {
     // insert code here...
     vector<int> nums;
-    nums.push_back(1);
-    nums.push_back(1);
-    nums.push_back(1);
-    nums.push_back(1);
-    nums.push_back(1);
+    nums.push_back(2);
+    nums.push_back(3);
+    nums.push_back(8);
+//    nums.push_back(1);
+//    nums.push_back(1);
 //    nums.push_back(50);
 //    nums.push_back(8);
 //    nums.push_back(13);
 //    nums.push_back(17);
 //    nums.push_back(18);
     string test = "skd\n\talskjv\n\t\tlskjf\n\t\t\tklsj.slkj\n\t\tsdlfkj.sdlkjf\n\t\tslkdjf.sdfkj\n\tsldkjf\n\t\tlskdjf\n\t\t\tslkdjf.sldkjf\n\t\t\tslkjf\n\t\t\tsfdklj\n\t\t\tlskjdflk.sdkflj\n\t\t\tsdlkjfl\n\t\t\t\tlskdjf\n\t\t\t\t\tlskdjf.sdlkfj\n\t\t\t\t\tlsdkjf\n\t\t\t\t\t\tsldkfjl.sdlfkj\n\t\t\t\tsldfjlkjd\n\t\t\tsdlfjlk\n\t\t\tlsdkjf\n\t\tlsdkjfl\n\tskdjfl\n\t\tsladkfjlj\n\t\tlskjdflkjsdlfjsldjfljslkjlkjslkjslfjlskjgldfjlkfdjbljdbkjdlkjkasljfklasjdfkljaklwejrkljewkljfslkjflksjfvsafjlgjfljgklsdf.a";
-    findTargetSumWays2(nums,3);
+    change(8, nums);
     cout << test << "\n";
     return 0;
 }
