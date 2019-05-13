@@ -444,6 +444,21 @@ int numberOfArithmeticSlices(vector<int> &A) {
     return dp[A.size() - 1];
 }
 
+//975. 只有2个按键的键盘
+int minSteps(int n) {
+    // Write your code here
+    int dp[n + 1];
+    dp[1] = 0;
+    for(int i = 2;i <= n;++i)
+        dp[i] = INT_MAX;
+    for(int i = 1;i <= n / 2;i++){
+        for(int j = 1;i + i * j <= n;j++){
+            dp[i + i * j] = min(dp[i + i * j],dp[i] + j + 1);
+        }
+    }
+    return dp[n];
+}
+
 int main(int argc, const char * argv[]) {
     // insert code here...
     vector<int> nums;
