@@ -25,6 +25,7 @@
 /* Begin PBXFileReference section */
 		C5B22C9B228183FD0039602F /* lintcode-do-exercises */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "lintcode-do-exercises"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5B22C9E228183FD0039602F /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		C5F4ACBE2289A66A000BA11E /* trie.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = trie.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +59,7 @@
 			isa = PBXGroup;
 			children = (
 				C5B22C9E228183FD0039602F /* main.cpp */,
+				C5F4ACBE2289A66A000BA11E /* trie.h */,
 			);
 			path = "lintcode-do-exercises";
 			sourceTree = "<group>";
