@@ -640,6 +640,34 @@ vector<int> maxSlidingWindow(vector<int> &nums, int k) {
     return res;
 }
 
+//29. 交叉字符串
+bool isInterleave(string &s1, string &s2, string &s3) {
+    // write your code here
+    bool dp[s1.length() + 1][s2.length() + 1];
+    dp[0][0] = true;
+    for(int i = 1;i <= s2.length();i++){
+        if(s2.substr(0,i) == s3.substr(0,i))
+            dp[0][i] = true;
+        else
+            dp[0][i] = false;
+    }
+    for(int i = 1;i <= s1.length();i++){
+        if(s1.substr(0,i) == s3.substr(0,i))
+            dp[i][0] = true;
+        else
+            dp[i][0] = false;
+    }
+    for(int i = 1;i <= s1.length();i++){
+        for(int j = 1;j <= s2.length();j++){
+            if((dp[i - 1][j] && s1[i - 1] == s3[i + j - 1]) || (dp[i][j - 1] && s2[j - 1] == s3[i + j - 1]))
+                dp[i][j] = true;
+            else
+                dp[i][j] = false;
+        }
+    }
+    return dp[s1.length()][s2.length()];
+}
+
 int main(int argc, const char * argv[]) {
     // insert code here...
     vector<int> nums;
@@ -653,26 +681,10 @@ int main(int argc, const char * argv[]) {
 //    nums.push_back(13);
 //    nums.push_back(17);
 //    nums.push_back(18);
-    vector<char> row1;
-    row1.push_back('0');
-    row1.push_back('E');
-    row1.push_back('0');
-    row1.push_back('0');
-    vector<char> row2;
-    row2.push_back('E');
-    row2.push_back('0');
-    row2.push_back('W');
-    row2.push_back('E');
-    vector<char> row3;
-    row3.push_back('0');
-    row3.push_back('E');
-    row3.push_back('0');
-    row3.push_back('0');
-    vector<vector<char>> test;
-    test.push_back(row1);
-    test.push_back(row2);
-    test.push_back(row3);
-    maxKilledEnemies(test);
+    string s1 = "a";
+    string s2 = "";
+    string s3 = "a";
+    isInterleave(s1, s2, s3);
     change(8, nums);
     Trie test2;
     return 0;
