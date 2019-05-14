@@ -15,6 +15,7 @@
 #include <math.h>
 #include <queue>
 #include "trie.h"
+#include <deque>
 
 using namespace std;
 
@@ -613,6 +614,29 @@ int maxKilledEnemies(vector<vector<char>> &grid) {
             if(grid[i][j] == '0')
                 res = max(res,top[i][j] + bottom[i][j] + left[i][j] + right[i][j]);
         }
+    return res;
+}
+
+//362. 滑动窗口的最大值
+vector<int> maxSlidingWindow(vector<int> &nums, int k) {
+    // write your code here
+    deque<int> deque;
+    for(int i = 0;i < k - 1;i++){
+        while(!deque.empty() && deque.back() < nums[i]){
+            deque.pop_back();
+        }
+        deque.push_back(nums[i]);
+    }
+    vector<int> res;
+    for(int i = k - 1;i < nums.size();i++){
+        while(!deque.empty() && deque.back() < nums[i]){
+            deque.pop_back();
+        }
+        deque.push_back(nums[i]);
+        res.push_back(deque.front());
+        if(deque.front() == nums[i - k + 1])
+            deque.pop_front();
+    }
     return res;
 }
 
