@@ -16,6 +16,17 @@ using namespace std;
 
 class Trie {
 public:
+    class node {
+    public:
+        node *children[52];
+        bool is_end = false;
+        string val;
+        node(){
+            for(int i = 0;i < 52;i++)
+                children[i] = nullptr;
+        }
+    };
+    
     Trie() {
         // do intialization if necessary
         root = new node();
@@ -41,6 +52,7 @@ public:
             }
         }
         temp->is_end = true;
+        temp->val = word.substr(0);
     }
     
     /*
@@ -87,16 +99,11 @@ public:
         return true;
     }
     
+    node* getNode(){
+        return root;
+    }
+    
 private:
-    class node {
-    public:
-        node *children[52];
-        bool is_end = false;
-        node(){
-            for(int i = 0;i < 52;i++)
-                children[i] = nullptr;
-        }
-    };
     node *root;
 };
 

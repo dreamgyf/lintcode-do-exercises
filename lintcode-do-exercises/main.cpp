@@ -477,6 +477,54 @@ int change(int amount, vector<int> &coins) {
     return dp[amount];
 }
 
+//119. 编辑距离
+int minDistance(string &word1, string &word2) {
+    // write your code here
+    int dp[word1.length() + 1][word2.length() + 1];
+    for(int i = 0;i <= word1.length();i++){
+        dp[i][0] = i;
+    }
+    for(int i = 0;i <= word2.length();i++){
+        dp[0][i] = i;
+    }
+    for(int i = 1;i <= word1.length();i++){
+        for(int j = 1;j <= word2.length();j++){
+            if(word1[i - 1] == word2[j - 1])
+                dp[i][j] = dp[i - 1][j - 1];
+            else {
+                dp[i][j] = min(dp[i - 1][j - 1] + 1,min(dp[i - 1][j] + 1,dp[i][j - 1] + 1));
+            }
+        }
+    }
+    return dp[word1.length()][word2.length()];
+}
+
+//void kDistance_find(Trie::node *node,vector<string> &res,string &target,int k,int *dp){
+//    if(node->is_end && dp[target.length()] <= k)
+//        res.push_back(node->val);
+//    int next[target.length() + 1];
+//    for(int i = 0;i < 26;i++){
+//        if(node->children[i] != nullptr){
+//
+//        }
+//    }
+//}
+//vector<string> kDistance(vector<string> &words, string &target, int k) {
+//    // write your code here
+//    Trie root;
+//    for(string s : words)
+//        root.insert(s);
+//    int dp[target.length() + 1];
+//    for(int i = 0;i <= target.length();i++)
+//        dp[i] = i;
+//    Trie::node *node = root.getNode();
+//    vector<string> res;
+//    kDistance_find(node,res,target,k,dp);
+//    return res;
+//}
+
+
+
 int main(int argc, const char * argv[]) {
     // insert code here...
     vector<int> nums;
