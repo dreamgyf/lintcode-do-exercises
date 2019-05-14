@@ -536,6 +536,86 @@ int climbStairs(int n) {
     return dp[n];
 }
 
+//92. 背包问题
+int backPack(int m, vector<int> &A) {
+    // write your code here
+    int dp[m + 1];
+    for(int i = 0;i <= m;i++){
+        dp[i] = 0;
+    }
+    for(int i = 0;i < A.size();i++){
+        for(int j = m;j >= A[i];j--){
+            dp[j] = max(dp[j],dp[j - A[i]] + A[i]);
+        }
+    }
+    return dp[m];
+}
+
+//553. 炸弹袭击
+int maxKilledEnemies(vector<vector<char>> &grid) {
+    // write your code here
+    if(grid.empty())
+        return 0;
+    int row = grid.size();
+    int col = grid[0].size();
+    int top[row][col];
+    int bottom[row][col];
+    int left[row][col];
+    int right[row][col];
+    for(int i = 0;i < row;i++)
+        for(int j = 0;j < col;j++){
+            top[i][j] = 0;
+            bottom[i][j] = 0;
+            left[i][j] = 0;
+            right[i][j] = 0;
+        }
+    for(int i = 0;i < row;i++)
+        for(int j = 0;j < col;j++){
+            //TOP
+            top[i][j] = 0;
+            if(i - 1 >= 0)
+                top[i][j] = top[i - 1][j];
+            if(grid[i][j] == 'E')
+                top[i][j]++;
+            else if(grid[i][j] == 'W')
+                top[i][j] = 0;
+            //LEFT
+            left[i][j] = 0;
+            if(j - 1 >= 0)
+                left[i][j] = left[i][j - 1];
+            if(grid[i][j] == 'E')
+                left[i][j]++;
+            else if(grid[i][j] == 'W')
+                left[i][j] = 0;
+        }
+    for(int i = row - 1;i >= 0;i--)
+        for(int j = col - 1;j >= 0;j--){
+            //RIGHT
+            right[i][j] = 0;
+            if(j + 1 <= col - 1)
+                right[i][j] = right[i][j + 1];
+            if(grid[i][j] == 'E')
+                right[i][j]++;
+            else if(grid[i][j] == 'W')
+                right[i][j] = 0;
+            //BOTTOM
+            bottom[i][j] = 0;
+            if(i + 1 <= row - 1)
+                bottom[i][j] = bottom[i + 1][j];
+            if(grid[i][j] == 'E')
+                bottom[i][j]++;
+            else if(grid[i][j] == 'W')
+                bottom[i][j] = 0;
+        }
+    int res = 0;
+    for(int i = 0;i < row;i++)
+        for(int j = 0;j < col;j++){
+            if(grid[i][j] == '0')
+                res = max(res,top[i][j] + bottom[i][j] + left[i][j] + right[i][j]);
+        }
+    return res;
+}
+
 int main(int argc, const char * argv[]) {
     // insert code here...
     vector<int> nums;
@@ -549,9 +629,27 @@ int main(int argc, const char * argv[]) {
 //    nums.push_back(13);
 //    nums.push_back(17);
 //    nums.push_back(18);
-    string test = "skd\n\talskjv\n\t\tlskjf\n\t\t\tklsj.slkj\n\t\tsdlfkj.sdlkjf\n\t\tslkdjf.sdfkj\n\tsldkjf\n\t\tlskdjf\n\t\t\tslkdjf.sldkjf\n\t\t\tslkjf\n\t\t\tsfdklj\n\t\t\tlskjdflk.sdkflj\n\t\t\tsdlkjfl\n\t\t\t\tlskdjf\n\t\t\t\t\tlskdjf.sdlkfj\n\t\t\t\t\tlsdkjf\n\t\t\t\t\t\tsldkfjl.sdlfkj\n\t\t\t\tsldfjlkjd\n\t\t\tsdlfjlk\n\t\t\tlsdkjf\n\t\tlsdkjfl\n\tskdjfl\n\t\tsladkfjlj\n\t\tlskjdflkjsdlfjsldjfljslkjlkjslkjslfjlskjgldfjlkfdjbljdbkjdlkjkasljfklasjdfkljaklwejrkljewkljfslkjflksjfvsafjlgjfljgklsdf.a";
+    vector<char> row1;
+    row1.push_back('0');
+    row1.push_back('E');
+    row1.push_back('0');
+    row1.push_back('0');
+    vector<char> row2;
+    row2.push_back('E');
+    row2.push_back('0');
+    row2.push_back('W');
+    row2.push_back('E');
+    vector<char> row3;
+    row3.push_back('0');
+    row3.push_back('E');
+    row3.push_back('0');
+    row3.push_back('0');
+    vector<vector<char>> test;
+    test.push_back(row1);
+    test.push_back(row2);
+    test.push_back(row3);
+    maxKilledEnemies(test);
     change(8, nums);
     Trie test2;
-    cout << test << "\n";
     return 0;
 }
