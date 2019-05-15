@@ -685,6 +685,24 @@ int longestCommonSubsequence(string &A, string &B) {
     return dp[A.size()][B.size()];
 }
 
+//749. 约翰的后花园
+string isBuild(int x) {
+    // write you code here
+    bool dp[x + 1];
+    dp[0] = true;
+    for(int i = 1;i <= x;i++){
+        bool bool_3 = false,bool_7 = false;
+        if(i - 3 >= 0){
+            bool_3 = dp[i - 3];
+        }
+        if(i - 7 >= 0){
+            bool_7 = dp[i - 7];
+        }
+        dp[i] = bool_3 || bool_7;
+    }
+    return dp[x] ? "YES" : "NO";
+}
+
 int main(int argc, const char * argv[]) {
     // insert code here...
     vector<int> nums;
