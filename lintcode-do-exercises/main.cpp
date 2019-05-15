@@ -703,6 +703,21 @@ string isBuild(int x) {
     return dp[x] ? "YES" : "NO";
 }
 
+//700. 杆子分割
+int cutting(vector<int> &prices, int n) {
+    // Write your code here
+    int dp[n + 1];
+    dp[0] = 0;
+    for(int i = 1;i <= n;i++){
+        dp[i] = 0;
+        for(int j = 1;j <= n;j++){
+            if(i - j >= 0)
+                dp[i] = max(dp[i],dp[i - j] + prices[j - 1]);
+        }
+    }
+    return dp[n];
+}
+
 int main(int argc, const char * argv[]) {
     // insert code here...
     vector<int> nums;
