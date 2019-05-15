@@ -718,6 +718,65 @@ int cutting(vector<int> &prices, int n) {
     return dp[n];
 }
 
+//1044. 最大的加号
+int orderOfLargestPlusSign(int N, vector<vector<int>> &mines) {
+    // Write your code here
+    int grid[N][N];
+    for(int i = 0;i < N;i++)
+        for(int j = 0;j < N;j++){
+            grid[i][j] = 1;
+        }
+    for(int i = 0;i < mines.size();i++){
+        grid[mines[i][0]][mines[i][1]] = 0;
+    }
+    int top[N][N],bottom[N][N],left[N][N],right[N][N];
+    for(int i = 0;i < N;i++)
+        for(int j = 0;j < N;j++){
+            //TOP
+            top[i][j] = 0;
+            if(i - 1 >= 0)
+                top[i][j] = top[i - 1][j];
+            if(grid[i][j] == 1)
+                top[i][j]++;
+            if(grid[i][j] == 0)
+                top[i][j] = 0;
+            //LEFT
+            left[i][j] = 0;
+            if(j - 1 >= 0)
+                left[i][j] = left[i][j - 1];
+            if(grid[i][j] == 1)
+                left[i][j]++;
+            if(grid[i][j] == 0)
+                left[i][j] = 0;
+        }
+    for(int i = N - 1;i >= 0;i--)
+        for(int j = N - 1;j >= 0;j--){
+            //BOTTOM
+            bottom[i][j] = 0;
+            if(i + 1 <= N - 1)
+                bottom[i][j] = bottom[i + 1][j];
+            if(grid[i][j] == 1)
+                bottom[i][j]++;
+            if(grid[i][j] == 0)
+                bottom[i][j] = 0;
+            //RIGHT
+            right[i][j] = 0;
+            if(j + 1 <= N - 1)
+                right[i][j] = right[i][j + 1];
+            if(grid[i][j] == 1)
+                right[i][j]++;
+            if(grid[i][j] == 0)
+                right[i][j] = 0;
+        }
+    int res = 0;
+    for(int i = 0;i < N;i++)
+        for(int j = 0;j < N;j++){
+            if(grid[i][j] == 1)
+                res = max(res,min(top[i][j],min(bottom[i][j],min(left[i][j],right[i][j]))));
+        }
+    return res;
+}
+
 int main(int argc, const char * argv[]) {
     // insert code here...
     vector<int> nums;
@@ -735,6 +794,12 @@ int main(int argc, const char * argv[]) {
     string s2 = "";
     string s3 = "a";
     isInterleave(s1, s2, s3);
+    vector<int> temp;
+    temp.push_back(4);
+    temp.push_back(2);
+    vector<vector<int>> test;
+    test.push_back(temp);
+    orderOfLargestPlusSign(5,test);
     change(8, nums);
     Trie test2;
     return 0;
