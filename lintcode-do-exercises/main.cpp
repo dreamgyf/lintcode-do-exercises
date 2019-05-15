@@ -668,6 +668,23 @@ bool isInterleave(string &s1, string &s2, string &s3) {
     return dp[s1.length()][s2.length()];
 }
 
+//77. 最长公共子序列
+int longestCommonSubsequence(string &A, string &B) {
+    // write your code here
+    int dp[A.size() + 1][B.size() + 1];
+    for(int i = 0;i <= A.size();i++)
+        for(int j = 0;j <= B.size();j++)
+            dp[i][j] = 0;
+    for(int i = 1;i <= A.size();i++)
+        for(int j = 1;j <= B.size();j++){
+            if(A[i - 1] == B[j - 1])
+                dp[i][j] = dp[i - 1][j - 1] + 1;
+            else
+                dp[i][j] = max(dp[i - 1][j],dp[i][j - 1]);
+        }
+    return dp[A.size()][B.size()];
+}
+
 int main(int argc, const char * argv[]) {
     // insert code here...
     vector<int> nums;
