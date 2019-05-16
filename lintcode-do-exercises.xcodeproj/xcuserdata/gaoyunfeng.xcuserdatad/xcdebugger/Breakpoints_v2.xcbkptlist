@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "lintcode-do-exercises/main.cpp"
-            timestampString = "579608555.243351"
+            timestampString = "579715345.0547709"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "172"
-            endingLineNumber = "172"
+            startingLineNumber = "173"
+            endingLineNumber = "173"
             landmarkName = "lengthLongestPath(string &amp;input)"
             landmarkType = "9">
          </BreakpointContent>
@@ -26,119 +26,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "lintcode-do-exercises/main.cpp"
-            timestampString = "579608555.243709"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "174"
-            endingLineNumber = "174"
-            landmarkName = "lengthLongestPath(string &amp;input)"
-            landmarkType = "9">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "lintcode-do-exercises/main.cpp"
-            timestampString = "579608555.243935"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "190"
-            endingLineNumber = "190"
-            landmarkName = "lengthLongestPath(string &amp;input)"
-            landmarkType = "9">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "lintcode-do-exercises/main.cpp"
-            timestampString = "579608555.244151"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "182"
-            endingLineNumber = "182"
-            landmarkName = "lengthLongestPath(string &amp;input)"
-            landmarkType = "9">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "lintcode-do-exercises/main.cpp"
-            timestampString = "579608555.244367"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "152"
-            endingLineNumber = "152"
-            landmarkName = "substr(string &amp;str , int pos)"
-            landmarkType = "9">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "lintcode-do-exercises/main.cpp"
-            timestampString = "579608555.244594"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "154"
-            endingLineNumber = "154"
-            landmarkName = "substr(string &amp;str , int pos)"
-            landmarkType = "9">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "lintcode-do-exercises/main.cpp"
-            timestampString = "579608555.244804"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "156"
-            endingLineNumber = "156"
-            landmarkName = "substr(string &amp;str , int pos)"
-            landmarkType = "9">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "lintcode-do-exercises/main.cpp"
-            timestampString = "579608555.244994"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "153"
-            endingLineNumber = "153"
-            landmarkName = "substr(string &amp;str , int pos)"
-            landmarkType = "9">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "lintcode-do-exercises/main.cpp"
-            timestampString = "579608555.2451839"
+            timestampString = "579715345.055202"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "175"
@@ -154,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "lintcode-do-exercises/main.cpp"
-            timestampString = "579608555.2453721"
+            timestampString = "579715345.055472"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "168"
-            endingLineNumber = "168"
+            startingLineNumber = "191"
+            endingLineNumber = "191"
             landmarkName = "lengthLongestPath(string &amp;input)"
             landmarkType = "9">
          </BreakpointContent>
@@ -170,23 +58,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "lintcode-do-exercises/main.cpp"
-            timestampString = "579608555.245559"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "169"
-            endingLineNumber = "169"
-            landmarkName = "lengthLongestPath(string &amp;input)"
-            landmarkType = "9">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "lintcode-do-exercises/main.cpp"
-            timestampString = "579608555.24575"
+            timestampString = "579715345.055899"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "183"
@@ -202,11 +74,139 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "lintcode-do-exercises/main.cpp"
-            timestampString = "579608555.245939"
+            timestampString = "579715345.056206"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "273"
-            endingLineNumber = "273"
+            startingLineNumber = "153"
+            endingLineNumber = "153"
+            landmarkName = "substr(string &amp;str , int pos)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "lintcode-do-exercises/main.cpp"
+            timestampString = "579715345.056555"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "155"
+            endingLineNumber = "155"
+            landmarkName = "substr(string &amp;str , int pos)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "lintcode-do-exercises/main.cpp"
+            timestampString = "579715345.0568351"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "157"
+            endingLineNumber = "157"
+            landmarkName = "substr(string &amp;str , int pos)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "lintcode-do-exercises/main.cpp"
+            timestampString = "579715345.057114"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "154"
+            endingLineNumber = "154"
+            landmarkName = "substr(string &amp;str , int pos)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "lintcode-do-exercises/main.cpp"
+            timestampString = "579715345.057379"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "176"
+            endingLineNumber = "176"
+            landmarkName = "lengthLongestPath(string &amp;input)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "lintcode-do-exercises/main.cpp"
+            timestampString = "579715345.057649"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "169"
+            endingLineNumber = "169"
+            landmarkName = "lengthLongestPath(string &amp;input)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "lintcode-do-exercises/main.cpp"
+            timestampString = "579715345.057915"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "170"
+            endingLineNumber = "170"
+            landmarkName = "lengthLongestPath(string &amp;input)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "lintcode-do-exercises/main.cpp"
+            timestampString = "579715345.058172"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "184"
+            endingLineNumber = "184"
+            landmarkName = "lengthLongestPath(string &amp;input)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "lintcode-do-exercises/main.cpp"
+            timestampString = "579715345.0584559"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "274"
+            endingLineNumber = "274"
             landmarkName = "superPow(int a, vector&lt;int&gt; &amp;b)"
             landmarkType = "9">
          </BreakpointContent>
@@ -218,11 +218,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "lintcode-do-exercises/main.cpp"
-            timestampString = "579608555.246135"
+            timestampString = "579715345.0588"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "256"
-            endingLineNumber = "256"
+            startingLineNumber = "257"
+            endingLineNumber = "257"
             landmarkName = "modPow(int x,int n,int mod)"
             landmarkType = "9">
          </BreakpointContent>
@@ -234,23 +234,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "lintcode-do-exercises/main.cpp"
-            timestampString = "579608555.246328"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "325"
-            endingLineNumber = "325"
-            landmarkName = "findTargetSumWays2(vector&lt;int&gt; &amp;nums, int s)"
-            landmarkType = "9">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "lintcode-do-exercises/main.cpp"
-            timestampString = "579608555.246523"
+            timestampString = "579715345.059109"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "326"
@@ -266,11 +250,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "lintcode-do-exercises/main.cpp"
-            timestampString = "579608555.246714"
+            timestampString = "579715345.059405"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "309"
-            endingLineNumber = "309"
+            startingLineNumber = "327"
+            endingLineNumber = "327"
             landmarkName = "findTargetSumWays2(vector&lt;int&gt; &amp;nums, int s)"
             landmarkType = "9">
          </BreakpointContent>
@@ -282,11 +266,27 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "lintcode-do-exercises/main.cpp"
-            timestampString = "579608555.246907"
+            timestampString = "579715345.059675"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "477"
-            endingLineNumber = "477"
+            startingLineNumber = "310"
+            endingLineNumber = "310"
+            landmarkName = "findTargetSumWays2(vector&lt;int&gt; &amp;nums, int s)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "lintcode-do-exercises/main.cpp"
+            timestampString = "579715345.059958"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "478"
+            endingLineNumber = "478"
             landmarkName = "change(int amount, vector&lt;int&gt; &amp;coins)"
             landmarkType = "9">
          </BreakpointContent>
@@ -298,11 +298,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "lintcode-do-exercises/main.cpp"
-            timestampString = "579608555.247102"
+            timestampString = "579715345.060236"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "617"
-            endingLineNumber = "617"
+            startingLineNumber = "618"
+            endingLineNumber = "618"
             landmarkName = "maxKilledEnemies(vector&lt;vector&lt;char&gt;&gt; &amp;grid)"
             landmarkType = "9">
          </BreakpointContent>
@@ -314,11 +314,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "lintcode-do-exercises/main.cpp"
-            timestampString = "579608555.247321"
+            timestampString = "579715345.0605"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "584"
-            endingLineNumber = "584"
+            startingLineNumber = "585"
+            endingLineNumber = "585"
             landmarkName = "maxKilledEnemies(vector&lt;vector&lt;char&gt;&gt; &amp;grid)"
             landmarkType = "9">
          </BreakpointContent>
@@ -330,11 +330,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "lintcode-do-exercises/main.cpp"
-            timestampString = "579608555.247546"
+            timestampString = "579715345.060762"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "576"
-            endingLineNumber = "576"
+            startingLineNumber = "577"
+            endingLineNumber = "577"
             landmarkName = "maxKilledEnemies(vector&lt;vector&lt;char&gt;&gt; &amp;grid)"
             landmarkType = "9">
          </BreakpointContent>
@@ -346,7 +346,23 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "lintcode-do-exercises/main.cpp"
-            timestampString = "579608555.2477601"
+            timestampString = "579715345.061024"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "669"
+            endingLineNumber = "669"
+            landmarkName = "isInterleave(string &amp;s1, string &amp;s2, string &amp;s3)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "lintcode-do-exercises/main.cpp"
+            timestampString = "579715345.061313"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "668"
@@ -362,12 +378,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "lintcode-do-exercises/main.cpp"
-            timestampString = "579608555.247975"
+            timestampString = "579715345.061572"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "667"
-            endingLineNumber = "667"
-            landmarkName = "isInterleave(string &amp;s1, string &amp;s2, string &amp;s3)"
+            startingLineNumber = "778"
+            endingLineNumber = "778"
+            landmarkName = "orderOfLargestPlusSign(int N, vector&lt;vector&lt;int&gt;&gt; &amp;mines)"
             landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>
@@ -378,12 +394,108 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "lintcode-do-exercises/main.cpp"
-            timestampString = "579608555.2482359"
+            timestampString = "579715345.061833"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "777"
-            endingLineNumber = "777"
-            landmarkName = "orderOfLargestPlusSign(int N, vector&lt;vector&lt;int&gt;&gt; &amp;mines)"
+            startingLineNumber = "790"
+            endingLineNumber = "790"
+            landmarkName = "basic_calculate(int num1,int num2,char ops)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "lintcode-do-exercises/main.cpp"
+            timestampString = "579715345.062081"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "837"
+            endingLineNumber = "837"
+            landmarkName = "calculate(string &amp;s)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "lintcode-do-exercises/main.cpp"
+            timestampString = "579715345.062327"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "803"
+            endingLineNumber = "803"
+            landmarkName = "calculate(string &amp;s)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "lintcode-do-exercises/main.cpp"
+            timestampString = "579715345.062569"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "806"
+            endingLineNumber = "806"
+            landmarkName = "calculate(string &amp;s)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "lintcode-do-exercises/main.cpp"
+            timestampString = "579715345.062812"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "805"
+            endingLineNumber = "805"
+            landmarkName = "calculate(string &amp;s)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "lintcode-do-exercises/main.cpp"
+            timestampString = "579715345.063054"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "845"
+            endingLineNumber = "845"
+            landmarkName = "calculate(string &amp;s)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "lintcode-do-exercises/main.cpp"
+            timestampString = "579715345.063291"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "844"
+            endingLineNumber = "844"
+            landmarkName = "calculate(string &amp;s)"
             landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>

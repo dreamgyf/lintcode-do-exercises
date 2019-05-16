@@ -16,6 +16,7 @@
 #include <queue>
 #include "trie.h"
 #include <deque>
+#include <cctype>
 
 using namespace std;
 
@@ -777,6 +778,73 @@ int orderOfLargestPlusSign(int N, vector<vector<int>> &mines) {
     return res;
 }
 
+//978. 基础计算器 980. 基础计算器 II 980. 基础计算器 II
+bool priority(char op1,char op2){
+    if(op1 == '(' || op2 == ')')
+        return false;
+    if((op1 == '+' || op1 == '-') && (op2 == '*' || op2 == '/'))
+        return false;
+    return true;
+}
+int basic_calculate(int num1,int num2,char ops){
+    switch(ops) {
+        case '+': return num1 + num2;
+        case '-': return num1 - num2;
+        case '*': return num1 * num2;
+        case '/': return num1 / num2;
+        default: return 0;
+    }
+}
+int calculate(string &s) {
+    // Write your code here
+    stack<int> nums;
+    stack<char> operators;
+    for(int i = 0;i < s.length();i++){
+        if(isdigit(s[i])){
+            int num = s[i] - '0';
+            while (i < s.length() - 1 && isdigit(s[i + 1])) {
+                num = num * 10 + (s[i + 1] - '0');
+                i++;
+            }
+            nums.push(num);
+        }
+        else if(s[i] == '('){
+            operators.push('(');
+        }
+        else if(s[i] == ')'){
+            while(operators.top() != '('){
+                int num2 = nums.top();
+                nums.pop();
+                int num1 = nums.top();
+                nums.pop();
+                nums.push(basic_calculate(num1, num2, operators.top()));
+                operators.pop();
+            }
+            operators.pop();
+        }
+        else if(s[i] == '+' || s[i] == '-' || s[i] == '*' || s[i] == '/'){
+            while(!operators.empty() && priority(operators.top(), s[i])){
+                int num2 = nums.top();
+                nums.pop();
+                int num1 = nums.top();
+                nums.pop();
+                nums.push(basic_calculate(num1, num2, operators.top()));
+                operators.pop();
+            }
+            operators.push(s[i]);
+        }
+    }
+    while(!operators.empty()){
+        int num2 = nums.top();
+        nums.pop();
+        int num1 = nums.top();
+        nums.pop();
+        nums.push(basic_calculate(num1, num2, operators.top()));
+        operators.pop();
+    }
+    return nums.top();
+}
+
 int main(int argc, const char * argv[]) {
     // insert code here...
     vector<int> nums;
@@ -802,5 +870,7 @@ int main(int argc, const char * argv[]) {
     orderOfLargestPlusSign(5,test);
     change(8, nums);
     Trie test2;
+    string s = "0-2147483648";
+    calculate(s);
     return 0;
 }
